@@ -14,8 +14,8 @@ class Triangulo:
                 f'Lado C: {self.lado_c} |'
 
 
-lado_a = float(input('Lado A: '))
-lado_b = float(input('Lado B: '))
-lado_c = float(input('Lado C: '))
-Tri = Triangulo(lado_a, lado_b, lado_c)
+a = float(input('Lado A: '))
+b = float(input('Lado B: '))
+c = float(input('Lado C: '))
+Tri = Triangulo(a, b, c)
 print(Tri)
