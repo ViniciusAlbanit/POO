@@ -3,7 +3,7 @@ cnoiva = set()
 cnoivo.add('noivo')
 cnoiva.add('noiva')
 conv, dono = input().split(';')
-if conv == 'ACABOU' and dono == '':
+if len(conv) < 1:
     print(cnoiva)
 else:
     while len(conv) > 1:
