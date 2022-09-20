@@ -1,7 +1,5 @@
 cnoivo = set()
 cnoiva = set()
-cnoivo.add('noivo')
-cnoiva.add('noiva')
 conv = input().split(';')
 if len(conv) < 2:
     print(cnoiva)
@@ -19,17 +17,21 @@ final = cnoivo.union(cnoiva)
 print('-'*20)
 print(f'LISTA FINAL')
 print('-'*20)
-print(sorted(final))
+for items in final:
+    print(sorted(final[items]))
+    items -= 1  
 print()
 print('-'*20)
 print(f'APENAS NOIVA')
 print('-'*20)
-print(sorted(cnoiva))
+anoiva = cnoiva.difference(cnoivo)
+print(sorted(anoiva))
 print()
 print('-'*20)
 print(f'APENAS NOIVO')
 print('-'*20)
-print(sorted(cnoivo))
+anoivo = cnoivo.difference(cnoiva)
+print(sorted(anoivo))
 print()
 print('-'*20)
 print(f'POR AMBOS')
@@ -39,7 +41,9 @@ print(sorted(ambos))
 print()
 print('-'*20)
 print(f'POR APENAS UM DELES')
-print()
+print('-'*20)
+
+
 
 
 
