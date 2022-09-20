@@ -17,9 +17,7 @@ final = cnoivo.union(cnoiva)
 print('-'*20)
 print(f'LISTA FINAL')
 print('-'*20)
-for items in final:
-    print(sorted(final[items]))
-    items -= 1  
+print(sorted(final))
 print()
 print('-'*20)
 print(f'APENAS NOIVA')
@@ -42,6 +40,10 @@ print()
 print('-'*20)
 print(f'POR APENAS UM DELES')
 print('-'*20)
+umdeles = cnoivo.symmetric_difference(cnoiva)
+print(sorted(umdeles))
+
+
 
 
 
