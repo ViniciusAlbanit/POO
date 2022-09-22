@@ -46,7 +46,7 @@ for _ in range(5):
     if voto == -1:
         print('Voto em branco')
         voto_branco +=1
-    elif voto == chave:
+    elif voto not in candidatos:
         print(f'Voto inválido')
     else:
         print(candidatos[voto][0])
