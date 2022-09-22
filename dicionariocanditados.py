@@ -30,20 +30,29 @@ candidatos = {}
 num_nome = 5
 num_votos = 0
 for _ in range(5):
-    nome_cand = input(f'Digite o nomes do {num_nome} canditado: ')
+    nome_cand = input(f'Digite o nomes do {num_nome} candidato: ')
     num_cand = int(input('Digite o número desse candidato: '))
-    candidatos[num_cand] = nome_cand, num_votos
+    candidatos[num_cand] = [nome_cand, num_votos]
     num_nome -=1
     print()
 
 print('-'*20)
 print()
 print(candidatos)
-for num_cand in candidatos.items():
+chave = candidatos.keys()
+voto_branco = 0
+for _ in range(5):
     voto = int(input('Quais desses canditados você quer votar: '))
-    if num_cand == voto:
-        candidatos[num_cand] = num_votos
-        num_votos +=1
-        
-print(candidatos)
+    if voto == -1:
+        print('Voto em branco')
+        voto_branco +=1
+    elif voto != chave:
+        print(f'Voto inválido')
+    else:
+        print(candidatos[voto][0])
+        candidatos[voto][1] += 1
+for nome_cand, num_votos in candidatos.values():
+    print(f'Nome do candidato: {nome_cand}')
+    print(f'Quantidade de voto desse candidato: {num_votos}')
+print(f'Votos em branco: {voto_branco}')
     

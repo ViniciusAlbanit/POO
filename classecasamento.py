@@ -1,7 +1,7 @@
 cnoivo = set()
 cnoiva = set()
 conv = input().split(';')
-if len(conv) < 2:
+if conv == "ACABOU":
     print('-'*20)
     print(f'LISTA FINAL')
     print('-'*20)
