@@ -26,6 +26,9 @@
 #          enunciado, ou seja, faça o download deste arquivo, insira
 #          o seu código abaixo e anexe novamente o arquivo como resposta.
 
+
+
+
 candidatos = {}
 num_nome = 5
 num_votos = 0
@@ -42,6 +45,7 @@ print(candidatos)
 chave = candidatos.keys()
 voto_branco = 0
 for _ in range(5):
+    print('Caso deseje votar em branco, digite -1')
     voto = int(input('Quais desses canditados você quer votar: '))
     if voto == -1:
         print('Voto em branco')
@@ -51,8 +55,21 @@ for _ in range(5):
     else:
         print(candidatos[voto][0])
         candidatos[voto][1] += 1
+print('-'*35)
+print('Resultado')
+print('-'*35)
 for nome_cand, num_votos in candidatos.values():
     print(f'Nome do candidato: {nome_cand}')
     print(f'Quantidade de voto desse candidato: {num_votos}')
+resul = []
+for votos in candidatos.values():
+    resul.append(votos[1])
+max_de_votos = max(resul)
+for chaves in candidatos.values():
+    if max_de_votos == chaves[1]:
+        ganhador = chaves[0]
+        break
 print(f'Votos em branco: {voto_branco}')
+print(f'O candidato eleito foi o: {ganhador}')
+
     
