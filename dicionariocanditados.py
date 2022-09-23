@@ -61,6 +61,7 @@ print('-'*35)
 for nome_cand, num_votos in candidatos.values():
     print(f'Nome do candidato: {nome_cand}')
     print(f'Quantidade de voto desse candidato: {num_votos}')
+    print('-'*35)
 resul = []
 for votos in candidatos.values():
     resul.append(votos[1])
