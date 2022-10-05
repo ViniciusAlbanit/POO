@@ -11,5 +11,6 @@ grid(True)
 title('Economias')
 xlabel('Meses')
 ylabel('Valor (R$)')
+legend(('Poupança', 'Tesouro'))
 
 show()
