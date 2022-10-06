@@ -1,4 +1,4 @@
-from pylab import plot, show, grid, axis, title, xlabel, ylabel
+from pylab import plot, show, grid, axis, title, xlabel, ylabel, legend
 
 xs = [1,2,3]
 ys1 = [2,4,6]
