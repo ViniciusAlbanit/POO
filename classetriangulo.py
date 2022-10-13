@@ -1,4 +1,4 @@
-class Triangulo:
+class triangulo:
     def __init__(self, lado_a, lado_b, lado_c):
         self.lado_a = lado_a
         self.lado_b = lado_b
@@ -17,5 +17,5 @@ class Triangulo:
 a = float(input('Lado A: '))
 b = float(input('Lado B: '))
 c = float(input('Lado C: '))
-Tri = Triangulo(a, b, c)
+Tri = triangulo(a, b, c)
 print(Tri)
