@@ -7,7 +7,7 @@ class PosGraduacao():
         if situacao == 'Aprovado':
             return "Doutorado em " + self.curso
         else:
-            return none
+            return None
 
 class Doutorado(PosGraduacao):
     def __init__(self, instituicao, curso, tese=None):
