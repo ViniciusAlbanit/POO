@@ -4,18 +4,18 @@ class PosGraduacao():
         self.curso = curso
 
     def get_curso(self, situacao):
-        if situacao == 'Aprovado':
-            return "Doutorado em " + self.curso
-        else:
-            return None
+        pass
 
 class Doutorado(PosGraduacao):
     def __init__(self, instituicao, curso, tese=None):
         super().init(instituicao, curso)
         self.__tese = tese
 
+    def get_curso(self):
+        return 'doutorado em ' + self.curso
+
     def get_tese(self):
-        return self.__tese
+        return self.tese
 
     def set_tese(self, titulo):
         self.__tese = titulo
@@ -25,6 +25,6 @@ class Doutorado(PosGraduacao):
                 f'Curso......: {self.curso}\n' +
                 f'Tese.......: {self.__tese}')
 
-d1 = Doutorado('Impacta', 'ADS')
+d1 = Doutorado('Impacta', 'ADS', 'Argumentação')
 print(d1.get_tese())
         
